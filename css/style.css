@@ -9,23 +9,36 @@
 }
 body{
     text-rendering: optimizeLegibility;
+    font-feature-settings: kern;
+    font-size: 17px;
+    color: #222;
 }
 p{
-    font-size: 16px;
+    font-family: Cardo, "Times New Roman", Times, serif;
+    line-height: 1.5em;
 }
 h1{
-    font-size: 48px;
+    font-family: Lora, serif;
+    font-size: 3.8em;
+    font-weight: 400;
+}
+a{
+    font-family: Lora, serif;
+    text-decoration: none;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
 }
 .navlinks{
     list-style-type: none;
     position: absolute;
-    top: 5%;
+    top: 15%;
 }
 .navdiv{
     position: fixed;
     height: 100%;
     width: 250px;
-    left: -230px;
+    left: -220px;
     background: #fff;
     box-shadow: 1px 0 12px -1px rgba(70,70,70,0.5);
     z-index: 2;
@@ -36,21 +49,17 @@ h1{
     font-family: Cardo, serif;
     // font-weight: bold;
     font-size: 28px;
+    font-style: normal;
     display: block;
     text-decoration: none;
-    color: #222;
+    color: #252525;
     transition: color .4s;
 }
 .navlinks li a:hover{
-    color: #666666;
+    color: #707070;
 }
 .contentdiv{
     display: inline-block;
-    left: 20px;
-    margin: 100px 350px 100px 350px;
-}
-.me{
-    font-family: Cardo, "Times New Roman", Times, serif;
-    font-style: normal;
-    color: #222;
+    left: 0px;
+    margin: 100px 320px 100px 320px;
 }
