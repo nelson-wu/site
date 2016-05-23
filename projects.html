@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <script src="scripts/jquery-2.2.3.min.js"></script>
+</head>
 <body>
     <?php
         $PAGETITLE="Projects";
         include("header.html");
         include("navigation.html");
     ?>
-    <script src="scripts/jquery-2.2.3.min.js"></script>
+    <div class="contentdiv">
+        <script>
+            $.ajax({
+                url: 'api.php',
+                data: 'category=projects',
+                dataType: 'json',
+                success: function(data){
+                    $.each(data, function(i, item){
+                        //console.log(item, i);
+                        if(i !== 0){
+                        $('.contentdiv').append("<h2>" + item.articleTitle + "</h2><br>" + "<p>" + item.articleContent + "</p><br>");
+                        }
+                     });
+                }
+
+            });
+        </script>
+    </div>
     <script src="scripts/main.js"></script>
 </body>
 </html>

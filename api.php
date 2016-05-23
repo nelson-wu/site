@@ -22,7 +22,11 @@
     if(isset($_GET["category"])){
         $tableName = $_GET["category"];
         $result = mysqli_query($conn, "SELECT * FROM $tableName");
-        $resultArray = mysqli_fetch_row($result);
+        $rownums = mysqli_num_rows($result);
+        $resultArray = array($rownums);
+        while($resultRow = mysqli_fetch_assoc($result)){
+            $resultArray[] = $resultRow;
+        }
         echo json_encode($resultArray);
         mysqli_free_result($result);
     }
