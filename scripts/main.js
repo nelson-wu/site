@@ -33,7 +33,7 @@ var main = function(){
 
             });
     };
-    $('.navdiv').hover(slideout, slidein);
+   // $('.navdiv').hover(slideout, slidein);
 }
 
 $(document).ready(main);

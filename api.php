@@ -20,7 +20,7 @@
     } else */
 
     if(isset($_GET["category"])){
-        $tableName = $_GET["category"];
+        $tableName = mysqli_real_escape_string($conn, $_GET["category"]);
         $result = mysqli_query($conn, "SELECT * FROM $tableName");
         $rownums = mysqli_num_rows($result);
         $resultArray = array($rownums);
