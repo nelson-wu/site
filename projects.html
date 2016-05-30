@@ -13,7 +13,7 @@
         <script>
             $.ajax({
                 url: 'api.php',
-                data: 'category=projects',
+                data: 'database=projects&table=entries',
                 dataType: 'json',
                 success: function(data){
                     $.each(data, function(i, item){
