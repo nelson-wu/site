@@ -5,7 +5,9 @@
         die("Connection failed: " . mysqli_connect_error());
     }
     
-    $dbs = mysqli_select_db($conn, "sitedata");
+    if(isset($_GET["database"])){
+        $dbs = mysqli_select_db($conn, $_GET["database"]);
+    }
     if(!$dbs){
         die("Database not selected.");
     }
@@ -19,8 +21,8 @@
         echo json_encode($resultArray);
     } else */
 
-    if(isset($_GET["category"])){
-        $tableName = mysqli_real_escape_string($conn, $_GET["category"]);
+    if(isset($_GET["table"])){
+        $tableName = mysqli_real_escape_string($conn, $_GET["table"]);
         $result = mysqli_query($conn, "SELECT * FROM $tableName");
         $rownums = mysqli_num_rows($result);
         $resultArray = array($rownums);
