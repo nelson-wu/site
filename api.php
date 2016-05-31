@@ -2,7 +2,7 @@
     $file = 'phplog';
     date_default_timezone_set('EST');
     $current = file_get_contents($file);
-    include("config.php");
+    include("../config.php");
     $conn = mysqli_connect($MYSQL_HOST, $MYSQL_USERNAME, $MYSQL_PASSWORD);
     if (!$conn){
 	$current .= date(DATE_RFC2822) .  mysqli_connect_error() . "\n";
