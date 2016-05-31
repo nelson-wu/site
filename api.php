@@ -1,3 +1,6 @@
+// PUT THIS OUTSIDE PUBLIC WEB DIRECTORY
+
+
 <?php
     $file = 'phplog';
     date_default_timezone_set('EST');
