@@ -1,0 +1,13 @@
+<?php
+    echo "test";
+    
+    include("config.php");
+
+    $conn =  mysqli_connect($MYSQL_HOST, $MYSQL_USERNAME, $MYSQL_PASSWORD);
+    
+    if(!$conn) {
+        die("connection failed: " . mysqli_connect_error());
+    }
+    
+    echo "Connected";
+?>
