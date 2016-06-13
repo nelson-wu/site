@@ -21,6 +21,7 @@ a{
     font-style: italic;
     color: #666;
     font-size: 0.9em;
+    outline: 0;
 }
 .contentdiv{
     display: inline-block;
@@ -31,8 +32,11 @@ a{
 
 /* Navigation Bar Styles */
 
-.navlinks{
+li{
     list-style-type: none;
+    text-decoration: none;
+}
+.navlinks{
     position: absolute;
     top: 20%;
 }
@@ -48,19 +52,26 @@ a{
     //border-right: 2px solid #111;
     //background: gray;
 }
+.menulabel {
+    position: absolute;
+    color: #888;
+    font-family: Lato, serif;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+}
 .navlinks li a{
-    font-family: Lora, serif;
-    line-height: 1.4;
-    // font-weight: bold;
-    font-size: 28px;
+    font-family: Lato, serif;
+    line-height: 1.6;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    font-size: 1.48em;
     font-style: normal;
     display: block;
-    color: #eee;
-    text-decoration: none;
+    color: #ccc;
     transition: color .4s;
 }
 .navlinks li a:hover{
-    color: #707070;
+    color: #fff;
 }
 
 
