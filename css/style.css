@@ -1,12 +1,5 @@
-/* borrowed from http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */
-@mixin vertical-align($position: relative) {
-    position: $position;
-    top: 50%;
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
+/* Body Styles */
+
 body{
     text-rendering: optimizeLegibility;
     font-feature-settings: kern;
@@ -15,7 +8,7 @@ body{
 }
 p{
     font-family: Cardo, "Times New Roman", Times, serif;
-    line-height: 1.5em;
+    line-height: 1.5;
 }
 h1{
     font-family: Lora, serif;
@@ -29,6 +22,15 @@ a{
     color: #666;
     font-size: 0.9em;
 }
+.contentdiv{
+    display: inline-block;
+    left: 0px;
+    margin: 9% 10% 9% 5%;
+    width: 35em;
+}
+
+/* Navigation Bar Styles */
+
 .navlinks{
     list-style-type: none;
     position: absolute;
@@ -38,29 +40,27 @@ a{
     position: fixed;
     height: 100%;
     width: 250px;
-    left: 0px;
-    background: #fff;
-    box-shadow: 1px 0 12px -1px rgba(70,70,70,0.5);
+    right: 0%;
+    background: #2F3437;
+    color: #000;
+    box-shadow: 1px 0 12px -1px rgba(70,70,70,1);
     z-index: 2;
     //border-right: 2px solid #111;
     //background: gray;
 }
 .navlinks li a{
-    font-family: Cardo, serif;
+    font-family: Lora, serif;
+    line-height: 1.4;
     // font-weight: bold;
     font-size: 28px;
     font-style: normal;
     display: block;
+    color: #eee;
     text-decoration: none;
-    color: #252525;
     transition: color .4s;
 }
 .navlinks li a:hover{
     color: #707070;
 }
-.contentdiv{
-    display: inline-block;
-    left: 0px;
-    margin: 9% 10% 9% 5%;
-    width: 35em;
-}
+
+
