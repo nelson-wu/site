@@ -1,10 +1,13 @@
 /* Body Styles */
-
+html{
+    height: 100%;
+}
 body{
     text-rendering: optimizeLegibility;
     font-feature-settings: kern;
     font-size: 19px;
     color: #222;
+    height: 100%;
 }
 p{
     font-family: Cardo, "Times New Roman", Times, serif;
@@ -23,11 +26,19 @@ a{
     font-size: 0.9em;
     outline: 0;
 }
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    flex-flow: row nowrap;
+    min-height: 100%;
+}
+
 .contentdiv{
-    display: inline-block;
-    left: 0px;
-    margin: 9% 10% 9% 5%;
-    width: 35em;
+    flex: 0 1 700px; 
+    padding: 50px 12% 50px 12%;
+    text-align: justify;
 }
 
 /* Navigation Bar Styles */
@@ -37,27 +48,16 @@ li{
     text-decoration: none;
 }
 .navlinks{
-    position: absolute;
-    top: 20%;
+    position: fixed;
+    margin: 100px auto;
 }
 .navdiv{
-    position: fixed;
-    height: 100%;
-    width: 250px;
-    right: 0%;
+    flex: 0 0 220px;
     background: #2F3437;
     color: #000;
     box-shadow: 1px 0 12px -1px rgba(70,70,70,1);
-    z-index: 2;
     //border-right: 2px solid #111;
     //background: gray;
-}
-.menulabel {
-    position: absolute;
-    color: #888;
-    font-family: Lato, serif;
-    font-weight: 100;
-    letter-spacing: 0.1em;
 }
 .navlinks li a{
     font-family: Lato, serif;
