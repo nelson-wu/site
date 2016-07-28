@@ -6,12 +6,27 @@
 <body>
     <?php
         $PAGETITLE="Articles";
-        include("header.html");
-        include("navigation.html");
+        require_once("header.html");
+        require_once("navigation.html");
     ?>
     <div class="contentdiv">
-        
+        <script>
+            $.ajax({
+                url: 'api.php',
+                data: 'table=articles',
+                dataType: 'json',
+                success: function(data){
+                    $.each(data, function(i, item){
+                        //console.log(item, i);
+                        if(i !== 0){
+                        $('.contentdiv').append("<h2>" + item.title + "</h2><br>" + "<p>" + item.content + "</p><br>");
+                        }
+                     });
+                }
+
+            });
+        </script>
     </div>
     <script src="scripts/main.js"></script>
 </body>
-<html>
+</html>

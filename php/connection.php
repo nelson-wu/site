@@ -3,11 +3,11 @@ class Database{
     protected static $connection;
     protected $logfile;
 
-    public function connect($database) {
+    public function connect() {
         $config = require_once('config.php');
 
         if(!isset(self::$connection)) {
-            self::$connection = new mysqli($config['MYSQL_HOST'], $config['MYSQL_USERNAME'], $config['MYSQL_PASSWORD'], $database);
+            self::$connection = new mysqli($config['MYSQL_HOST'], $config['MYSQL_USERNAME'], $config['MYSQL_PASSWORD'], $config['MYSQL_DB']);
         }
 
         if(self::connection === false) {
