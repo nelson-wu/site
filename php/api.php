@@ -3,7 +3,7 @@
 
 <?php
 
-include("../config.php");
+include("/config.php");
 date_default_timezone_set('EST');
 $current = file_get_contents($LOGFILE);
 $conn = mysqli_connect($MYSQL_HOST, $MYSQL_USERNAME, $MYSQL_PASSWORD);
@@ -34,7 +34,7 @@ if(!isset($_GET["table"])){
 }
 else {
 	$tableName = mysqli_real_escape_string($conn, $_GET["table"]);
-	$result = mysqli_query($conn, "SELECT * FROM $tableName limit 20");
+	$result = mysqli_query($conn, "SELECT * FROM $tableName");
 	$rownums = mysqli_num_rows($result);
 	$resultArray = array($rownums);
 
