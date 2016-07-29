@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="scripts/jquery-2.2.3.min.js"></script>
-</head>
-<body>
-        <div class="contentdiv">
-        <script>
-            $.ajax({
-                url: '../php/api.php',
-                data: 'table=articles',
-                dataType: 'json',
-                success: function(data){
-                    $.each(data, function(i, item){
-                        //console.log(item, i);
-                        if(i !== 0){
-                        $('.contentdiv').append("<h2>" + item.title + "</h2><br>" + "<p>" + item.content + "</p><br>");
-                        }
-                     });
-                }
+    <head>
+        <script src="scripts/jquery-2.2.3.min.js"></script>
+    </head>
+    <body>
+        <div class="wrapper"> 
 
-            });
-        </script>
-    </div>
+            <div class="contentdiv">
+                <script>
+$.ajax({
+    url: 'api.php',
+    data: 'table=articles',
+    dataType: 'json',
+    success: function(data){
+        $.each(data, function(i, item){
+            console.log(item, i);
+            if(i !== 0){
+                $('.contentdiv').append("<h2>" + item.title + "</h2><br>" + "<p>" + item.content + "</p><br>");
+            }
+        });
+    }
+
+});
+                </script>
+            </div>
     <?php
         $PAGETITLE="Articles";
         require_once("header.html");
         require_once("navigation.html");
     ?>
 
-    <script src="scripts/main.js"></script>
-</body>
+        </div> 
+        <script src="scripts/main.js"></script>
+    </body>
 </html>

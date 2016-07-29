@@ -3,7 +3,9 @@
 
 <?php
 // Load the Database class
-require_once('connection.php');
+echo "test";
+require_once('../php/connection.php');
+error_log("test");
 $database = new Database();
 if(isset($_GET["table"])){
     $table = $_GET["table"];
