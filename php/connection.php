@@ -22,7 +22,7 @@ class Database{
         if($result === false){
             error_log(self::$connection->error);
         }
-        return result;
+        return $result;
     }
 
     public function select($query){
