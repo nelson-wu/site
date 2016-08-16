@@ -10,7 +10,7 @@ class Database{
             self::$connection = new mysqli($config['MYSQL_HOST'], $config['MYSQL_USERNAME'], $config['MYSQL_PASSWORD'], $config['MYSQL_DB']);
         }
 
-        if(self::connection === false) {
+        if(self::$connection === false) {
             error_log(self::$connection->error);
         }
         return self::$connection;
