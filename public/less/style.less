@@ -1,0 +1,76 @@
+/* Body Styles */
+html{
+    height: 100%;
+}
+body{
+    text-rendering: optimizeLegibility;
+    font-feature-settings: kern;
+    font-size: 19px;
+    color: #222;
+    height: 100%;
+}
+p{
+    font-family: Cardo, "Times New Roman", Times, serif;
+    line-height: 1.5;
+}
+h1{
+    font-family: Lora, serif;
+    font-size: 3.8em;
+    font-weight: 400;
+}
+a{
+    font-family: Lora, serif;
+    text-decoration: none;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    outline: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    flex-flow: row nowrap;
+    min-height: 100%;
+}
+
+.contentdiv{
+    flex: 0 1 700px; 
+    padding: 50px 12% 50px 12%;
+}
+
+/* Navigation Bar Styles */
+
+li{
+    list-style-type: none;
+    text-decoration: none;
+}
+.navlinks{
+    position: fixed;
+    margin: 100px auto;
+}
+.navdiv{
+    flex: 0 0 220px;
+    background: #2F3437;
+    color: #000;
+    box-shadow: 1px 0 12px -1px rgba(70,70,70,1);
+    //border-right: 2px solid #111;
+    //background: gray;
+}
+.navlinks li a{
+    font-family: Lato, serif;
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    font-size: 1.48em;
+    font-style: normal;
+    display: block;
+    color: #ccc;
+    transition: color .4s;
+}
+.navlinks li a:hover{
+    color: #fff;
+}
+
+

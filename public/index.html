@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link href='https://fonts.googleapis.com/css?family=Lato:300|Cardo:400|Lora:400,400italic' rel='stylesheet' type='text/css'>
-        <meta charset="utf-8">
-        <title>Nelson Wu</title>
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <div class="wrapper">
-       
-        <div class="contentdiv">
-            <h1 class="me">Nelson Wu</h1>
-            <article>
-                <p>Hi, I'm Nelson.<br></p>
-                <p>I'm a Computer Engineering student at the University of Waterloo. I'm interested in a broad variety of technology, from low-level analog circuitry to UI/UX design.<br></p>
-                <p>I also have a diverse variety of personal interests, including high-end audio, Japanese culture, and calligraphy.</p><br>
-            </article>
-            <div class="linksdiv">
-                <a href="mailto:wu_nelson@outlook.com">Email :: </a> 
-                <a href="#">LinkedIn :: </a> 
-                <a href="http://github.com/nelson-wu">Github</a>
-            </div>
-        </div>
- <div class="navdiv">
-            <ul class="navlinks">
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="/articles.html">ARTICLES</a></li>
-                <li><a href="#">RESUME</a></li>
-            </ul>
-        </div>
-
-            <script src="scripts/jquery-2.2.3.min.js"></script>
-            <script src="scripts/main.js"></script>
-    </div>
-    </body>
-
-
+    <?php 
+      $PAGETITLE="Nelson Wu";
+      require_once('include/header.html');
+      ?>
+      <body>
+          <div class="wrapper">
+              <div class="contentdiv">
+                  <h1 class="me">Nelson Wu</h1>
+                  <article>
+                      <p>Hi, I'm Nelson.<br></p>
+                      <p>I'm a Computer Engineering student at the University of Waterloo. I'm interested in a broad variety of technology, from low-level analog circuitry to UI/UX design.<br></p>
+                      <p>I also have a diverse variety of personal interests, including high-end audio, Japanese culture, and calligraphy.</p><br>
+                  </article>
+                  <div class="linksdiv">
+                      <a href="mailto:wu_nelson@outlook.com">Email :: </a> 
+                      <a href="#">LinkedIn :: </a> 
+                      <a href="http://github.com/nelson-wu">Github</a>
+                  </div>
+              </div>
+              <?php require_once('include/navigation.html'); ?>
+          </div>
+          <script src="scripts/jquery-2.2.3.min.js"></script>
+          <script src="scripts/main.js"></script>
+      </body>
 </html>

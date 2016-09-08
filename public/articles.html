@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script src="scripts/jquery-2.2.3.min.js"></script>
-    </head>
-    <body>
+    <?php 
+      $PAGETITLE = 'Articles';
+      require_once('include/header.html');
+    ?>
+        <body>
         <div class="wrapper"> 
 
             <div class="contentdiv">
@@ -15,21 +16,14 @@ $.ajax({
     success: function(data){
         $.each(data, function(i, item){
             console.log(item, i);
-            if(i !== 0){
                 $('.contentdiv').append("<h2>" + item.title + "</h2><br>" + "<p>" + item.content + "</p><br>");
-            }
         });
     }
 
 });
                 </script>
             </div>
-    <?php
-        $PAGETITLE="Articles";
-        require_once("header.html");
-        require_once("navigation.html");
-    ?>
-
+    <?php require_once("include/navigation.html"); ?>
         </div> 
         <script src="scripts/main.js"></script>
     </body>
