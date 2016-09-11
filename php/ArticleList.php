@@ -1,13 +1,13 @@
 <?php
 class ArticleList{
-    public $articles;
-    public $titles;
+    public $articles; // array of Articles
+    public $titles; // dictionary with title, id
 
     function readTitles(){
         require_once('Database.php');
         $db = new Database();
-        $query = "SELECT `title` from `articles`";
-        return $db->select($query);
+        $query = "SELECT `title`,`id` from `articles`";
+        $titles = $db->select($query);
     }
 
     function readArticles(){

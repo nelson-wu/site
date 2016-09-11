@@ -1,5 +1,12 @@
 $(document).ready(function() {
-    $('#article-form').submit(function(event) {
+    $('#login-form').submit(function(event) {
         event.preventDefault();
+
+        $.post('login.php', $(this).serialize())
+            .done(function(response) {
+                if (response.text === 'success'){
+                    $('#content').fadeOut('slow', null);
+                }
+            });
     });
 });
