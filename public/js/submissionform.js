@@ -5,7 +5,8 @@ $(document).ready(function() {
         $.post('login.php', $(this).serialize())
             .done(function(response) {
                 if (response.text === 'success'){
-                    $('#content').fadeOut('slow', null);
+                    $('#content').empty()
+                        .load('/php/loadForm.php');
                 }
             });
     });

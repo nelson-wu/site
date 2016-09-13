@@ -41,5 +41,10 @@ class Database{
         $connection = $this->connect();
         return "'" . $connection->real_escape_string($value) . "'";
     }
+
+    public function sanitize($value){
+        $connection = $this->connect();
+        return $this->escape(htmlspecialchars(strip_tags(trim($value))));
+    }
 }
 ?>

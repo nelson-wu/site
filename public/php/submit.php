@@ -1,5 +1,5 @@
 <?php
-require_once("../php/connection.php");
+require_once("/../php/connection.php");
 $database = new Database();
 
 if (isset($_POST['title']) && isset($_POST['content'])) {
