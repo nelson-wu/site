@@ -44,7 +44,7 @@ class Database{
 
     public function sanitize($value){
         $connection = $this->connect();
-        return $this->escape(htmlspecialchars(strip_tags(trim($value))));
+        return $connection->real_escape_string(htmlspecialchars(strip_tags(trim($value))));
     }
 }
 ?>
