@@ -1,0 +1,11 @@
+<div clas="title-div display-none">
+    <div class="title-links">
+    </div>
+</div>
+<div class="navdiv">
+    <ul class="navlinks">
+        <li><a href="index.html">ABOUT</a></li>
+        <li><a href="articles.html">ARTICLES</a></li>
+        <li><a href="#">RESUME</a></li>
+    </ul>
+</div>

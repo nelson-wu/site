@@ -29,16 +29,17 @@ a{
 
 .wrapper {
     display: flex;
-    justify-content: space-between;
-    align-content: stretch;
+    justify-content: center;
+    //align-content: stretch;
     flex-flow: row nowrap;
     min-height: 100%;
+    background: #f6fbfd;
 }
 
 .contentdiv{
     flex: 0 1 700px; 
     background: #f6fbfd;
-    padding: 50px 0 50px 0;
+    padding: 50px 30px;
 }
 
 /* Navigation Bar Styles */
@@ -78,14 +79,14 @@ li{
 
 @media (max-width: 768px) {
     body{
-        font-size: 17px;
+        font-size: 0.9em;
     }
     div:first-child{
         opacity: .99;
     }
     .contentdiv{
-        position: absolute;
-        margin-right: 40px;
+        //position: absolute;
+        //margin-right: 40px;
         height: 100%;
         box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 
@@ -103,3 +104,4 @@ li{
         padding-left: 5px;
     }
 }
+
